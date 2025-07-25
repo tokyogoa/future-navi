@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Navi</title>
+    <style>
+        /* Basic Reset & Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F0F2F5;
+            color: #343A40;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #E9ECEF;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #6C757D;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        /* AdSense Slot Styling */
+        .adsense-slot {
+            background-color: #e0e0e0;
+            border: 1px dashed #999;
+            text-align: center;
+            padding: 15px;
+            margin: 20px auto;
+            font-size: 0.9em;
+            color: #666;
+            max-width: 728px; /* Common banner width */
+            height: 90px; /* Common banner height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Category Sections */
+        .category-section {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .category-section h2 {
+            font-size: 2em;
+            color: #6C757D;
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category-section h2 .icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* Card Styling */
+        .card {
+            background-color: #F0F2F5;
+            border: 1px solid #E9ECEF;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            font-size: 1.3em;
+            color: #6C757D;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.95em;
+            color: #343A40;
+            margin-bottom: 15px;
+            flex-grow: 1; /* Allows description to take available space */
+        }
+
+        .card .button {
+            display: inline-block;
+            background-color: #28A745;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+            text-align: center;
+        }
+
+        .card .button:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .category-section {
+                padding: 20px;
+            }
+
+            .category-section h2 {
+                font-size: 1.6em;
+                margin-bottom: 20px;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr; /* Single column on small screens */
+            }
+
+            .adsense-slot {
+                max-width: 320px; /* Smaller banner width for mobile */
+                height: 50px; /* Smaller banner height for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            header {
+                padding: 20px 10px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Future Navi: 당신의 목표를 향한 가장 빠른 길</h1>
+        </header>
+
+        
+
+        <main>
+            <!-- Category 1: 대학진학 -->
+            <section class="category-section">
+                <h2><span class="icon">🎓</span> 대학진학 필수 정보</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>한국교육과정평가원</h3>
+                        <p>수능 및 모의평가 공식 출제 기관. 모든 기출문제를 다운로드할 수 있는 곳.</p>
+                        <a href="https://www.suneung.re.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>EBSi</h3>
+                        <p>수능 연계 교재 및 무료 강의의 메카. 내신과 수능 준비의 필수 사이트.</p>
+                        <a href="https://www.ebsi.co.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>족보닷컴</h3>
+                        <p>중고등학교 내신 기출문제 및 족보를 제공하는 대표적인 사이트.</p>
+                        <a href="https://www.zocbo.com" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>대입정보포털 어디가</h3>
+                        <p>교육부 공식 대입 정보 사이트. 대학별 전형, 성적 분석 등 종합 정보 제공.</p>
+                        <a href="https://www.adiga.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>메가스터디</h3>
+                        <p>대표적인 입시 교육 사이트. 입시 뉴스, 설명회, 배치표 등 최신 정보 확인.</p>
+                        <a href="https://www.megastudy.net" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>오르비</h3>
+                        <p>국내 최대 수험생 커뮤니티. 입시 정보, 공부법, 고민 상담 등을 나누는 공간.</p>
+                        <a href="https://orbi.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>수만휘</h3>
+                        <p>네이버 대표 수험생 카페. 다양한 입시 후기와 자료 공유.</p>
+                        <a href="https://cafe.naver.com/suhui" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>나이스 대국민서비스</h3>
+                        <p>학생부(생활기록부)를 직접 확인하고 관리할 수 있는 공식 사이트.</p>
+                        <a href="https://www.neis.go.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>대학알리미</h3>
+                        <p>대학별 공시 정보(취업률, 등록금, 경쟁률 등)를 객관적으로 비교 분석.</p>
+                        <a href="https://www.academyinfo.go.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>콴다</h3>
+                        <p>모르는 수학, 과학 문제를 사진 찍어 올리면 풀이를 제공하는 앱/웹 서비스.</p>
+                        <a href="https://qanda.ai/ko" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>전국대학입학처</h3>
+                        <p>관심 대학의 입학처 사이트 바로가기. (예시로 서울대학교 입학처 링크)</p>
+                        <a href="https://admission.snu.ac.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>오르비</h3>
+                        <p>국내 최대 수험생 커뮤니티. 입시 정보, 공부법, 합격 후기 등을 나누는 공간.</p>
+                        <a href="https://orbi.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <!-- Category 2: 해외유학 -->
+            <section class="category-section">
+                <h2><span class="icon">✈️</span> 해외유학 필수 정보</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>ETS (토플)</h3>
+                        <p>토플(TOEFL) 시험 주관사. 시험 접수, 성적 확인, 무료 연습문제 제공.</p>
+                        <a href="https://www.ets.org/toefl" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>IELTS</h3>
+                        <p>아이엘츠(IELTS) 시험 공식 사이트. 시험 정보 및 무료 연습 자료 제공.</p>
+                        <a href="https://www.ielts.org" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>JASSO (일본유학시험)</h3>
+                        <p>일본유학시험(EJU) 주관사. 기출문제 샘플 및 시험 정보 제공.</p>
+                        <a href="https://www.jasso.go.jp/ryugaku/eju/index.html" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>고우해커스</h3>
+                        <p>국내 최대 유학 커뮤니티. 어학, 교환학생, 석박사 유학 정보의 보고.</p>
+                        <a href="https://www.gohackers.com" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>College Board (SAT)</h3>
+                        <p>미국 대학 입학시험 SAT 주관사. 시험 접수 및 공식 문제(Official Practice) 제공.</p>
+                        <a href="https://www.collegeboard.org" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>국립국제교육원</h3>
+                        <p>정부초청장학생(GKS) 프로그램 등 국비 유학 관련 모든 정보 제공.</p>
+                        <a href="https://www.studyinkorea.go.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>TestGlider</h3>
+                        <p>AI 기반 토플/아이엘츠 모의고사 사이트. 실제와 유사한 환경에서 연습 가능.</p>
+                        <a href="https://www.testglider.com" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>ETS (GRE)</h3>
+                        <p>미국/캐나다 대학원 입학시험 GRE 주관사. 시험 접수 및 공식 자료 제공.</p>
+                        <a href="https://www.ets.org/gre" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>Chegg</h3>
+                        <p>교과서 솔루션, 과외, 작문 교정 등 학업에 실질적인 도움을 주는 사이트.</p>
+                        <a href="https://www.chegg.com" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>Grammarly</h3>
+                        <p>영문 에세이, SOP 등 작성 시 문법, 스타일을 교정해주는 필수 작문 툴.</p>
+                        <a href="https://www.grammarly.com" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>QS Top Universities</h3>
+                        <p>세계 대학 랭킹, 전공별 순위 등 학교 정보를 객관적으로 비교할 수 있는 곳.</p>
+                        <a href="https://www.topuniversities.com" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>고우해커스</h3>
+                        <p>국내 최대 유학 커뮤니티. 어학, 교환학생, 석박사 유학 정보 및 성공 후기.</p>
+                        <a href="https://www.gohackers.com" target="_blank" class="button">바로가기</a>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <!-- Category 3: 취업 -->
+            <section class="category-section">
+                <h2><span class="icon">💼</span> 취업 필수 정보</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>사람인</h3>
+                        <p>대한민국 대표 채용 포털. 채용 공고, 합격 자소서, 면접 후기 등 제공.</p>
+                        <a href="https://www.saramin.co.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>잡코리아</h3>
+                        <p>사람인과 양대산맥을 이루는 채용 포털. 신입, 경력, 인턴 등 다양한 공고.</p>
+                        <a href="https://www.jobkorea.co.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>월드잡</h3>
+                        <p>해외 취업 및 인턴십 정보 제공. K-Move 스쿨 등 해외 진출 지원 프로그램 확인.</p>
+                        <a href="https://www.worldjob.or.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>NCS 공식사이트</h3>
+                        <p>공공기관/공기업 취업 준비생의 필독 사이트. 직무기술서, 기출문제 확인.</p>
+                        <a href="https://www.ncs.go.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>잡플래닛</h3>
+                        <p>전/현직원이 평가하는 기업 리뷰, 연봉 정보, 면접 후기를 볼 수 있는 곳.</p>
+                        <a href="https://www.jobplanet.co.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>프로그래머스</h3>
+                        <p>개발자 취업 필수 코딩 테스트 연습 및 채용 플랫폼.</p>
+                        <a href="https://programmers.co.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>원티드</h3>
+                        <p>IT/스타트업 중심의 채용 플랫폼. 합격 시 보상금 지급.</p>
+                        <a href="https://www.wanted.co.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>자소설닷컴</h3>
+                        <p>주요 기업 자소서 항목 확인, 맞춤법 검사, 글자수 세기 등 자소서 특화.</p>
+                        <a href="https://jasoseol.com" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>OPIC</h3>
+                        <p>대표적인 비즈니스 영어 말하기 시험. 등급별 기출문제(Script) 확인 필수.</p>
+                        <a href="https://www.opic.or.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>The Muse</h3>
+                        <p>직무/산업별 커리어 가이드, 이력서 템플릿 등 양질의 영문 취업 콘텐츠 제공.</p>
+                        <a href="https://www.themuse.com" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>DART</h3>
+                        <p>금융감독원 전자공시시스템. 지원하려는 회사의 재무 상태, 사업 보고서 확인.</p>
+                        <a href="https://dart.fss.or.kr" target="_blank" class="button">바로가기</a>
+                    </div>
+                    <div class="card">
+                        <h3>링커리어</h3>
+                        <p>대학생 및 취업 준비생을 위한 커뮤니티. 인턴, 신입 합격 후기 등 공유.</p>
+                        <a href="https://linkareer.com" target="_blank" class="button">바로가기</a>
+                    </div>
+                </div>
+            </section>
+
+            
+        </main>
+    </div>
+
+    <script>
+        // No JavaScript is strictly necessary for the current requirements as CSS handles hover effects.
+        // This script block is included as per the requirement for a single index.html file.
+        console.log("Career Roadmap Hub loaded successfully!");
+    </script>
+</body>
+</html>

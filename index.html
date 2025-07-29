@@ -15,6 +15,11 @@
             line-height: 1.6;
         }
 
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
         .container {
             max-width: 1200px;
             margin: 20px auto;
@@ -23,11 +28,12 @@
 
         /* Header */
         header {
-            background-color: #E9ECEF;
-            padding: 50px 20px;
+            background-color: #fff;
+            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             margin-bottom: 30px;
+            border-radius: 8px;
         }
 
         header h1 {
@@ -35,6 +41,30 @@
             color: #6C757D;
             margin: 0;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #343A40;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #E9ECEF;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover {
+            background-color: #28A745;
+            color: white;
         }
 
         /* AdSense Slot Styling */
@@ -82,6 +112,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
+            perspective: 1500px; /* 3D 효과를 위한 원근감 설정 */
         }
 
         /* Card Styling */
@@ -91,15 +122,16 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 전환 효과를 더 부드럽게 */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            /* 3D 입체 효과를 위한 transform 속성 변경 */
+            transform: translateY(-8px) rotateY(5deg) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.1);
         }
 
         .card h3 {
@@ -170,19 +202,38 @@
                 font-size: 1.5em;
             }
         }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            background-color: #E9ECEF;
+            color: #6C757D;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Future Navi: 당신의 목표를 향한 가장 빠른 길</h1>
+            <nav>
+                <a href="#college-prep">🎓 대학진학</a>
+                <a href="#study-abroad">✈️ 해외유학</a>
+                <a href="#career">💼 취업</a>
+            </nav>
         </header>
 
         
 
         <main>
             <!-- Category 1: 대학진학 -->
-            <section class="category-section">
+            <section id="college-prep" class="category-section">
                 <h2><span class="icon">🎓</span> 대학진학 필수 정보</h2>
                 <div class="card-grid">
                     <div class="card">
@@ -240,18 +291,13 @@
                         <p>관심 대학의 입학처 사이트 바로가기. (예시로 서울대학교 입학처 링크)</p>
                         <a href="https://admission.snu.ac.kr" target="_blank" class="button">바로가기</a>
                     </div>
-                    <div class="card">
-                        <h3>오르비</h3>
-                        <p>국내 최대 수험생 커뮤니티. 입시 정보, 공부법, 합격 후기 등을 나누는 공간.</p>
-                        <a href="https://orbi.kr" target="_blank" class="button">바로가기</a>
-                    </div>
                 </div>
             </section>
 
             
 
             <!-- Category 2: 해외유학 -->
-            <section class="category-section">
+            <section id="study-abroad" class="category-section">
                 <h2><span class="icon">✈️</span> 해외유학 필수 정보</h2>
                 <div class="card-grid">
                     <div class="card">
@@ -309,18 +355,13 @@
                         <p>세계 대학 랭킹, 전공별 순위 등 학교 정보를 객관적으로 비교할 수 있는 곳.</p>
                         <a href="https://www.topuniversities.com" target="_blank" class="button">바로가기</a>
                     </div>
-                    <div class="card">
-                        <h3>고우해커스</h3>
-                        <p>국내 최대 유학 커뮤니티. 어학, 교환학생, 석박사 유학 정보 및 성공 후기.</p>
-                        <a href="https://www.gohackers.com" target="_blank" class="button">바로가기</a>
-                    </div>
                 </div>
             </section>
 
             
 
             <!-- Category 3: 취업 -->
-            <section class="category-section">
+            <section id="career" class="category-section">
                 <h2><span class="icon">💼</span> 취업 필수 정보</h2>
                 <div class="card-grid">
                     <div class="card">
@@ -389,6 +430,11 @@
             
         </main>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Future Navi. All Rights Reserved.</p>
+        <p>당신의 미래를 위한 모든 정보를 한 곳에서.</p>
+    </footer>
 
     <script>
         // No JavaScript is strictly necessary for the current requirements as CSS handles hover effects.
